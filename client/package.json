@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "node node_modules/react-scripts/scripts/start.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-modal": "^3.4.5",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-sound": "^1.2.0"
+  }
+}
