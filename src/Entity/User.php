@@ -56,6 +56,16 @@ class User implements UserInterface, \Serializable
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $gender;
+
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $searchGender;
+
     public function getUsername(): string
     {
         return $this->email;
@@ -196,6 +206,30 @@ class User implements UserInterface, \Serializable
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getGender(): ?string
+    {
+        return $this->gender;
+    }
+
+    public function setGender(string $gender): self
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    public function getSearchGender(): ?string
+    {
+        return $this->searchGender;
+    }
+
+    public function setSearchGender(string $searchGender): self
+    {
+        $this->searchGender = $searchGender;
 
         return $this;
     }

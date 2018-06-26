@@ -4,7 +4,7 @@ security:
             algorithm: bcrypt
 
     providers:
-        our_db_provider:
+        users:
             entity:
                 class: App\Entity\User
                 property: email
@@ -12,7 +12,7 @@ security:
     firewalls:
 
         login:
-            provider: our_db_provider
+            provider: users
             pattern:  ^/api/login
             stateless: true
             anonymous: true
