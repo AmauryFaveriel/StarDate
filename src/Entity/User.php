@@ -71,6 +71,11 @@ class User implements UserInterface, \Serializable
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $age;
+
     public function getUsername(): string
     {
         return $this->email;
@@ -247,6 +252,18 @@ class User implements UserInterface, \Serializable
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getAge(): ?int
+    {
+        return $this->age;
+    }
+
+    public function setAge(int $age): self
+    {
+        $this->age = $age;
 
         return $this;
     }
