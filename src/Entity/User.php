@@ -66,6 +66,11 @@ class User implements UserInterface, \Serializable
      */
     private $searchGender;
 
+    /**
+     * @ORM\Column(type="string", length=150)
+     */
+    private $image;
+
     public function getUsername(): string
     {
         return $this->email;
@@ -230,6 +235,18 @@ class User implements UserInterface, \Serializable
     public function setSearchGender(string $searchGender): self
     {
         $this->searchGender = $searchGender;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
